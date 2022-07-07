@@ -5,9 +5,9 @@
 
 @layer components {
     .link {
-        @apply hover:text-white duration-300 font-semibold ease-linear text-lg cursor-pointer hover:scale-105;
+        @apply hover:text-blue-500 duration-300 font-semibold ease-linear text-lg cursor-pointer hover:scale-105;
     }
     .header {
-        @apply flex w-screen items-center justify-between lg:justify-start space-x-10 bg-white shadow-lg px-2 py-3 sticky top-0 z-10
+        @apply flex w-screen items-center justify-between lg:justify-start space-x-10 bg-blue-500 shadow-lg px-2 py-3 sticky top-0 z-10
     }
 }
