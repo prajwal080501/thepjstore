@@ -2,12 +2,21 @@ import { MinusSmIcon, TrashIcon, XCircleIcon } from "@heroicons/react/solid";
 import React from "react";
 import { motion } from "framer-motion";
 import { PlusSmIcon, ShoppingCartIcon } from "@heroicons/react/outline";
-const Sidebar = ({ isOpen,setIsOpen, handleOpen }) => {
+const Sidebar = ({
+  isOpen,
+  setIsOpen,
+  handleOpen,
+  addToCart,
+  cart,
+  clearCart,
+  subTotal,
+  removeFromCart,
+}) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 500 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, duration: 1, ease: "ease", delay:1 }}
+      exit={{ opacity: 0, duration: 1, ease: "ease", delay: 1 }}
       className={
         isOpen
           ? "z-20  rounded-l-lg fixed w-[75vw] md:w-[50vw] lg:w-[25vw] xl:w-[20vw]  top-0 right-0 h-full shadow-lg bg-white transform transition-transform duration-300 translate-x-full"
@@ -29,36 +38,57 @@ const Sidebar = ({ isOpen,setIsOpen, handleOpen }) => {
       <div className="w-[90%] h-fit bg-gray-200 px-3 py-2 rounded-lg mx-auto mt-1">
         <div>
           <ol className="px-5">
-            <li type="1" className="px-5 py-3">
-              <div className="text-xl font-bold flex items-center space-x-5">
-                <span className="text-gray-900 text-base ">Product Name</span>
-                <span className="flex items-center px-2 py-4 space-x-3">
-                  <MinusSmIcon className="carticon" />
-                  <p>1</p>
-                  <PlusSmIcon className="carticon" />
-                </span>
+            {Object.keys(cart).length === 0 && (
+              <div clasasName="">
+                <p className="text-center mx-auto text-lg py-4 w-full">
+                  Your cart is empty
+                  <br />
+                  <span clasaName="text-6xl font-bold">😞</span>
+                </p>
               </div>
-            </li>
-            <li type="1" className="px-5 py-3">
-              <div className="text-xl font-bold flex items-center space-x-5">
-                <span className="text-gray-900 text-base ">Product Name</span>
-                <span className="flex items-center px-2 py-4 space-x-3">
-                  <MinusSmIcon className="carticon" />
-                  <p>1</p>
-                  <PlusSmIcon className="carticon" />
-                </span>
-              </div>
-            </li>
-            <li type="1" className="px-5 py-3">
-              <div className="text-xl font-bold flex items-center space-x-5">
-                <span className="text-gray-900 text-base ">Product Name</span>
-                <span className="flex items-center px-2 py-4 space-x-3">
-                  <MinusSmIcon className="carticon" />
-                  <p>1</p>
-                  <PlusSmIcon className="carticon" />
-                </span>
-              </div>
-            </li>
+            )}
+            {Object.keys(cart).map((k) => {
+              return (
+                <li key={k} type="1" className="px-5 py-3">
+                  <div className="text-xl font-bold flex items-center space-x-5">
+                    <span className="text-gray-900 text-base ">
+                      {cart[k].name}
+                    </span>
+                    <span className="flex items-center px-2 py-4 space-x-3">
+                      <MinusSmIcon
+                        onClick={() => {
+                          removeFromCart(
+                            k,
+                            1,
+                            cart[k].price,
+                            cart[k].name,
+                            cart[k].size,
+                            cart[k].color,
+                            cart[k].variant
+                          );
+                        }}
+                        className="carticon"
+                      />
+                      <p>{cart[k].qty}</p>
+                      <PlusSmIcon
+                        onClick={() => {
+                          addToCart(
+                            k,
+                            1,
+                            cart[k].price,
+                            cart[k].name,
+                            cart[k].size,
+                            cart[k].color,
+                            cart[k].variant
+                          );
+                        }}
+                        className="carticon"
+                      />
+                    </span>
+                  </div>
+                </li>
+              );
+            })}
           </ol>
 
           <div className="w-full h-fit fle text-center items-center space-y-4 space-x-3">
@@ -71,11 +101,16 @@ const Sidebar = ({ isOpen,setIsOpen, handleOpen }) => {
       </div>
       <div className="grid grid-cols-1 space-y-3 md:space-y-0 place-content-center space-x-0 md:space-x-3 md:grid-cols-2 py-5 px-3">
         <button className="cartbutton flex items-center justify-evenly">
-        <ShoppingCartIcon className="h-6 w-6"/>
-        Checkout</button>
-        <button className="cartbutton flex items-center justify-evenly">
-        <TrashIcon className="h-6 w-6"/>
-        Clear Cart</button>
+          <ShoppingCartIcon className="h-6 w-6" />
+          Checkout
+        </button>
+        <button
+          onClick={clearCart}
+          className="cartbutton flex items-center justify-evenly"
+        >
+          <TrashIcon className="h-6 w-6" />
+          Clear Cart
+        </button>
       </div>
     </motion.div>
   );

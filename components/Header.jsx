@@ -6,8 +6,8 @@ import { BasicData } from "../Data/Data";
 import { ShoppingBagIcon } from "@heroicons/react/outline";
 import Sidebar from "./Sidebar";
 import MobileMenu from "./MobileMenu";
-const Header = ({ isOpen, menuOpen, setMenuOpen, handleMenuOpen, setIsOpen, handleOpen }) => {
-
+const Header = ({ isOpen, menuOpen, setMenuOpen, handleMenuOpen, setIsOpen, handleOpen, addToCart, cart, removeFromCart, clearCart, subTotal }) => {
+  console.log(addToCart, cart, removeFromCart, clearCart, subTotal)
   return (
     <>
       <header className="z-10 sticky top-0 bg-white text-gray-600 body-font shadow-md">
@@ -56,7 +56,7 @@ const Header = ({ isOpen, menuOpen, setMenuOpen, handleMenuOpen, setIsOpen, hand
         </div>
         <MobileMenu menuOpen={menuOpen}  handleOpen={handleOpen} />
       </header>
-      <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} handleOpen={handleOpen} />
+      <Sidebar cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subTotal={subTotal} isOpen={isOpen} setIsOpen={setIsOpen} handleOpen={handleOpen} />
     </>
   );
 };
