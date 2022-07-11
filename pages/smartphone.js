@@ -10,7 +10,7 @@ const Smartphone = () => {
         </p>
       </div>
       <div
-        className="max-w-[70vw] mx-auto h-fit grid grid-cols1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 py-10 place-content-center
+        className="max-w-[70vw] mx-auto place-items-center h-fit grid grid-cols1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 py-10 place-content-center
     "
       >
         <div className="w-[90%] px-3 py-4 h-fit bg-white rounded-xl shadow-lg hover:scale-105 duration-300 ease-in-out hover:shadow-2xl cursor-pointer mt-3">

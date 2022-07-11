@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const contact = () => {
   return (
     <section className="text-gray-600 body-font z-0 relative">
-      <div className="absolute inset-0 bg-gray-300">
+      <div className="absolute inset-0 bg-gray-300 overflow-hidden">
         <motion.iframe
         initial={{  zoom: 0, x: -400}}
         animate={{  zoom: 1, x: 0}}

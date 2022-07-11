@@ -5,20 +5,22 @@ import { motion } from "framer-motion";
 import { BasicData } from "../Data/Data";
 import { ShoppingBagIcon } from "@heroicons/react/outline";
 import Sidebar from "./Sidebar";
-const Header = ({isOpen, setIsOpen, handleOpen}) => {
+import MobileMenu from "./MobileMenu";
+const Header = ({ isOpen, menuOpen, setMenuOpen, handleMenuOpen, setIsOpen, handleOpen }) => {
 
   return (
     <>
       <header className="z-10 sticky top-0 bg-white text-gray-600 body-font shadow-md">
-        <div className="container xs:mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <Link href="/">
-              <span className="cursor-pointer ml-3 text-xl font-bold">
-                The Store
-              </span>
-            </Link>
-          </a>
-          <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <div className="container xs:mx-auto flex flex-wrap p-3 flex-col md:flex-row items-center">
+          <div className="flex justify-between items-end  w-full md:w-fit">
+          <Link href="/">
+            <a className="cursor-pointer ml-3 text-xl font-bold">
+              The Store
+            </a>
+          </Link>
+          <MenuIcon onClick={handleMenuOpen} className="w-6 -h-6 md:hidden"/>
+          </div>
+          <nav className="hidden md:ml-auto md:flex flex-wrap items-center text-base  justify-center">
             <Link href="/">
               <a className="cursor-pointer hover:text-blue-500 mr-5">Home</a>
             </Link>
@@ -30,7 +32,7 @@ const Header = ({isOpen, setIsOpen, handleOpen}) => {
             <Link href="/laptop">
               <p className="cursor-pointer hover:text-blue-500 mr-5">Laptops</p>
             </Link>
-           
+
             <Link href="/contact">
               <p className="cursor-pointer hover:text-blue-500 mr-5">
                 Contact
@@ -41,17 +43,20 @@ const Header = ({isOpen, setIsOpen, handleOpen}) => {
                 Services
               </p>
             </Link> */}
+            <div className="flex items-center h-full justify-between w-fit px-6">
+              <button className="inline-flex hover:bg-blue-600 items-center bg-blue-500 border-0 py-1 px-3 mr-4 text-white focus:outline-none duration-300 ease-linear shadow-md active:shadow-sm active:scale-90 rounded text-base mt-4 md:mt-0">
+                Button
+              </button>
+              <div title="cart" className="md:absolute mt-5  ml-5 md:right-0 justify-items-center px-3 py-2 flex items-center my-auto  mb-4">
+                <ShoppingBagIcon onClick={handleOpen} className="h-6 w-6 ml-8 text-gray-900 hover:text-blue-500 duration-300 ease-linear cursor-pointer hover:scale-110" />
+              </div>
+            </div>
           </nav>
-          <button className="inline-flex hover:bg-blue-600 items-center bg-blue-500 border-0 py-1 px-3 text-white focus:outline-none duration-300 ease-linear shadow-md active:shadow-sm active:scale-90 rounded text-base mt-4 md:mt-0">
-            Button
-          </button>
-          <div title="cart" className="md:absolute mt-5 md:right-10 justify-items-center px-3 py-2 flex items-center my-auto  mb-4">
-            <ShoppingBagIcon onClick={handleOpen} className="h-6 w-6 text-gray-900 hover:text-blue-500 duration-300 ease-linear cursor-pointer hover:scale-110" />
-          </div>
+
         </div>
+        <MobileMenu menuOpen={menuOpen}  handleOpen={handleOpen} />
       </header>
       <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} handleOpen={handleOpen} />
-
     </>
   );
 };

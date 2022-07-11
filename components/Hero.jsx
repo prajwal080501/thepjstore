@@ -33,8 +33,8 @@ const Hero = () => {
               alt="image"
               objectFit="contain"
               width={720}
-              height={600}
-              className="shadow-2xl hover:scale-105 duration-300 ease-linear"
+              height={350}
+              className="shadow-2xl hover:scale-105 duration-300 ease-linear "
             />
         </div>
       </section>

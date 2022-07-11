@@ -19,7 +19,7 @@ const Sidebar = ({ isOpen,setIsOpen, handleOpen }) => {
         <XCircleIcon
           title="close cart"
           onClick={handleOpen}
-          className=" cursor-pointer h-6 w-6 mr-9  hover:text-red-500 duration-300 "
+          className=" cursor-pointer h-6 w-6  hover:text-red-500 duration-300 "
         />
       </div>
       <div className="w-full">
