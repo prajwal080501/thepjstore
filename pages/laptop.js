@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react'
-
+import Link from 'next/link'
 const Laptop = () => {
   return (
     <section className="text-gray-600 body-font bg-gray-200">
@@ -13,6 +13,7 @@ const Laptop = () => {
 
         <div className="w-[90%] px-3 py-4 h-fit bg-white rounded-xl shadow-lg hover:scale-105 duration-300 ease-in-out hover:shadow-2xl cursor-pointer mt-3">
           <a className="block relative rounded overflow-hidden">
+           <Link href="/product/wear-the-code">
             <Image
               alt="ecommerce"
               className="object-cover object-top w-full h-full block"
@@ -20,6 +21,8 @@ const Laptop = () => {
               width={400}
               height={400}
             />
+            </Link>
+
           </a>
           <div className="mt-4 xs:text-center">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
@@ -33,6 +36,7 @@ const Laptop = () => {
         </div>
         <div className="w-[90%] px-3 py-4 h-fit bg-white rounded-xl shadow-lg hover:scale-105 duration-300 ease-in-out hover:shadow-2xl cursor-pointer mt-3">
           <a className="block relative rounded overflow-hidden">
+           <Link href="/product/wear-the-code">
             <Image
               alt="ecommerce"
               className="object-cover object-top w-full h-full block"
@@ -40,6 +44,7 @@ const Laptop = () => {
               width={400}
               height={400}
             />
+            </Link>
           </a>
           <div className="mt-4 xs:text-center">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
@@ -53,6 +58,7 @@ const Laptop = () => {
         </div>
         <div className="w-[90%] px-3 py-4 h-fit bg-white rounded-xl shadow-lg hover:scale-105 duration-300 ease-in-out hover:shadow-2xl cursor-pointer mt-3">
           <a className="block relative rounded overflow-hidden">
+           <Link href="/product/wear-the-code">
             <Image
               alt="ecommerce"
               className="object-cover object-top w-full h-full block"
@@ -60,6 +66,7 @@ const Laptop = () => {
               width={400}
               height={400}
             />
+            </Link>
           </a>
           <div className="mt-4 xs:text-center">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
@@ -73,6 +80,7 @@ const Laptop = () => {
         </div>
         <div className="w-[90%] px-3 py-4 h-fit bg-white rounded-xl shadow-lg hover:scale-105 duration-300 ease-in-out hover:shadow-2xl cursor-pointer mt-3">
           <a className="block relative rounded overflow-hidden">
+           <Link href="/product/wear-the-code">
             <Image
               alt="ecommerce"
               className="object-cover object-top w-full h-full block"
@@ -80,6 +88,7 @@ const Laptop = () => {
               width={400}
               height={400}
             />
+            </Link>
           </a>
           <div className="mt-4 xs:text-center">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
@@ -93,6 +102,7 @@ const Laptop = () => {
         </div>
         <div className="w-[90%] px-3 py-4 h-fit bg-white rounded-xl shadow-lg hover:scale-105 duration-300 ease-in-out hover:shadow-2xl cursor-pointer mt-3">
           <a className="block relative rounded overflow-hidden">
+           <Link href="/product/wear-the-code">
             <Image
               alt="ecommerce"
               className="object-cover object-top w-full h-full block"
@@ -100,6 +110,7 @@ const Laptop = () => {
               width={400}
               height={400}
             />
+            </Link>
           </a>
           <div className="mt-4 xs:text-center">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
@@ -113,6 +124,7 @@ const Laptop = () => {
         </div>
         <div className="w-[90%] px-3 py-4 h-fit bg-white rounded-xl shadow-lg hover:scale-105 duration-300 ease-in-out hover:shadow-2xl cursor-pointer mt-3">
           <a className="block relative rounded overflow-hidden">
+           <Link href="/product/wear-the-code">
             <Image
               alt="ecommerce"
               className="object-cover object-top w-full h-full block"
@@ -120,6 +132,7 @@ const Laptop = () => {
               width={400}
               height={400}
             />
+            </Link>
           </a>
           <div className="mt-4 xs:text-center">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">

@@ -4,7 +4,8 @@ const nextConfig = {
   images: {
     domains: [
       "shorturl.at",
-      "m.media-amazon.com"
+      "m.media-amazon.com",
+      "dummyimage.com"
     ]
   },
 }

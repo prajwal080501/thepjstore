@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 import img from "../Assets/iphone13.png";
 const Smartphone = () => {
   return (
@@ -15,6 +16,7 @@ const Smartphone = () => {
       >
         <div className="w-[90%] px-3 py-4 h-fit bg-white rounded-xl shadow-lg hover:scale-105 duration-300 ease-in-out hover:shadow-2xl cursor-pointer mt-3">
           <a className="block relative rounded overflow-hidden">
+            <Link href="/product/smartphone">
             <Image
               alt="ecommerce"
               className="object-cover object-top w-full h-full block"
@@ -22,6 +24,7 @@ const Smartphone = () => {
               height={400}
               width={400}
             />
+            </Link>
           </a>
           <div className="mt-4 xs:text-center">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
@@ -35,6 +38,7 @@ const Smartphone = () => {
         </div>
         <div className="w-[90%] px-3 py-4 h-fit bg-white rounded-xl shadow-lg hover:scale-105 duration-300 ease-in-out hover:shadow-2xl cursor-pointer mt-3">
           <a className="block relative rounded overflow-hidden">
+            <Link href="/product/smartphone">
             <Image
               alt="ecommerce"
               className="object-cover object-top w-full h-full block"
@@ -42,6 +46,7 @@ const Smartphone = () => {
               height={400}
               width={400}
             />
+            </Link>
           </a>
           <div className="mt-4 xs:text-center">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
@@ -55,6 +60,7 @@ const Smartphone = () => {
         </div>
         <div className="w-[90%] px-3 py-4 h-fit bg-white rounded-xl shadow-lg hover:scale-105 duration-300 ease-in-out hover:shadow-2xl cursor-pointer mt-3">
           <a className="block relative rounded overflow-hidden">
+            <Link href="/product/smartphone">
             <Image
               alt="ecommerce"
               className="object-cover object-top w-full h-full block"
@@ -62,6 +68,7 @@ const Smartphone = () => {
               height={400}
               width={400}
             />
+            </Link>
           </a>
           <div className="mt-4 xs:text-center">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
@@ -75,6 +82,7 @@ const Smartphone = () => {
         </div>
         <div className="w-[90%] px-3 py-4 h-fit bg-white rounded-xl shadow-lg hover:scale-105 duration-300 ease-in-out hover:shadow-2xl cursor-pointer mt-3">
           <a className="block relative rounded overflow-hidden">
+            <Link href="/product/smartphone">
             <Image
               alt="ecommerce"
               className="object-cover object-top w-full h-full block"
@@ -82,6 +90,7 @@ const Smartphone = () => {
               height={400}
               width={400}
             />
+            </Link>
           </a>
           <div className="mt-4 xs:text-center">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
@@ -95,6 +104,7 @@ const Smartphone = () => {
         </div>
         <div className="w-[90%] px-3 py-4 h-fit bg-white rounded-xl shadow-lg hover:scale-105 duration-300 ease-in-out hover:shadow-2xl cursor-pointer mt-3">
           <a className="block relative rounded overflow-hidden">
+            <Link href="/product/smartphone">
             <Image
               alt="ecommerce"
               className="object-cover object-top w-full h-full block"
@@ -102,6 +112,7 @@ const Smartphone = () => {
               height={400}
               width={400}
             />
+            </Link>
           </a>
           <div className="mt-4 xs:text-center">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">

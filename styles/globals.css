@@ -20,4 +20,7 @@ body {
     .cartbutton {
         @apply bg-gray-300 px-3 py-3 rounded-lg hover:bg-blue-500 duration-300 ease-linear hover:text-white shadow-md active:shadow-sm active:scale-95
     }
+    .checkbutton {
+        @apply bg-gray-300 px-3 py-2 rounded-lg hover:bg-blue-500 duration-300 ease-linear hover:text-white shadow-md active:shadow-sm active:scale-95
+    }
 }
