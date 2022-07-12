@@ -15,6 +15,7 @@ function MyApp({ Component, pageProps }) {
     try {
       if (localStorage.getItem("cart")) {
         setCart(JSON.parse(localStorage.getItem("cart")));
+        saveCart(JSON.parse(localStorage.getItem("cart")))
       }
     } catch (error) {
       console.error(error);
@@ -23,15 +24,14 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   const saveCart = (myCart) => {
-    localStorage.setItem("cart", JSON.stringify(myCart));
-
+    localStorage.setItem("cart", JSON.stringify(myCart))
     let subt = 0;
-    let keys = Object.keys(myCart);
-    keys.forEach((key) => {
-      subt += myCart[key].price * myCart[key].quantity;
-    });
+    let keys = Object.keys(myCart)
+    for (let i = 0; i < keys.length; i++) {
+      subt += myCart[keys[i]].price * myCart[keys[i]].qty;
+    }
 
-    setSubTotal(subt);
+    setSubTotal(subt)
   };
 
   const addToCart = (itemCode, qty, price, name, size, color, variant) => {
@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
       newCart[itemCode].qty = cart[itemCode].qty + qty
     }
     else {
-      newCart[itemCode] = { qty: 1, price, name, size, variant }
+      newCart[itemCode] = { qty: 1, price, name, size, variant, color }
     }
     setCart(newCart)
     saveCart(newCart)
@@ -63,7 +63,8 @@ function MyApp({ Component, pageProps }) {
     setCart({});
     saveCart({});
   };
-  const handleOpen = () => {
+  const handleOpen = (e) => {
+    e.preventDefault();
     setIsOpen(!isOpen);
   };
 
@@ -87,6 +88,7 @@ function MyApp({ Component, pageProps }) {
             removeFromCart={removeFromCart}
             clearCart={clearCart}
             setSubTotal={setSubTotal}
+            subTotal={subTotal}
           />
           <Component
             cart={cart}
@@ -94,6 +96,8 @@ function MyApp({ Component, pageProps }) {
             removeFromCart={removeFromCart}
             clearCart={clearCart}
             setSubTotal={setSubTotal}
+            subTotal={subTotal}
+            handleOpen={handleOpen}
             {...pageProps}
           />
           <Footer />

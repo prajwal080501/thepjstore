@@ -2,6 +2,7 @@ import { MinusSmIcon, TrashIcon, XCircleIcon } from "@heroicons/react/solid";
 import React from "react";
 import { motion } from "framer-motion";
 import { PlusSmIcon, ShoppingCartIcon } from "@heroicons/react/outline";
+import Link from "next/link";
 const Sidebar = ({
   isOpen,
   setIsOpen,
@@ -40,8 +41,8 @@ const Sidebar = ({
           <ol className="px-5">
             {Object.keys(cart).length === 0 && (
               <div clasasName="">
-                <p className="text-center mx-auto text-lg py-4 w-full">
-                  Your cart is empty
+                <p className="text-center mx-auto py-4 w-full">
+                  <span clasaName="text-xl font-bold"> Your cart is empty </span>
                   <br />
                   <span clasaName="text-6xl font-bold">😞</span>
                 </p>
@@ -94,16 +95,19 @@ const Sidebar = ({
           <div className="w-full h-fit fle text-center items-center space-y-4 space-x-3">
             <p className="text-2xl font-bold">Subtotal</p>
             <p className="text-2xl font-bold bg-blue-500 px-3 py-2 text-white rounded-lg">
-              $0
+              ${subTotal}
             </p>
           </div>
         </div>
       </div>
       <div className="grid grid-cols-1 space-y-3 md:space-y-0 place-content-center space-x-0 md:space-x-3 md:grid-cols-2 py-5 px-3">
-        <button className="cartbutton flex items-center justify-evenly">
-          <ShoppingCartIcon className="h-6 w-6" />
-          Checkout
-        </button>
+        <Link href="/checkout">
+          <button className="cartbutton flex items-center justify-evenly">
+            <ShoppingCartIcon className="h-6 w-6" />
+            Checkout
+          </button>
+        </Link>
+
         <button
           onClick={clearCart}
           className="cartbutton flex items-center justify-evenly"
