@@ -28,9 +28,9 @@ const MobileMenu = ({ menuOpen, handleOpen }) => {
               </p>
             </Link> */}
                 <div className=" w-full flex items-center justify-center">
-                    <button className="inline-flex hover:bg-blue-600 items-center bg-blue-500 border-0 py-1 px-3 text-white focus:outline-none duration-300 ease-linear shadow-md active:shadow-sm active:scale-90 rounded text-base md:mt-0">
-                        Button
-                    </button>
+                    <Link href={'/login'} className="inline-flex hover:bg-blue-600 items-center bg-blue-500 border-0 py-1 px-3 text-white focus:outline-none duration-300 ease-linear shadow-md active:shadow-sm active:scale-90 rounded text-base md:mt-0">
+                        Login
+                    </Link>
                         <ShoppingBagIcon onClick={handleOpen} className="h-6 w-6 ml-8 text-gray-900 align-middle hover:text-blue-500 duration-300 ease-linear cursor-pointer hover:scale-110" />
                 </div>
             </nav>

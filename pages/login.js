@@ -19,17 +19,17 @@ const Login = () => {
               <div className="lg:flex lg:flex-wrap g-0">
                 <div className="lg:w-6/12 px-4 md:px-0">
                   <div className="md:p-12 md:mx-6">
-                    <div className="text-center">
+                    <div className="">
                       <h4 className="text-4xl font-bold mt-1 mb-12 pb-1 pt-6 md:pt-0">The Store</h4>
                     </div>
                     <form>
-                      <p className="mb-4">Please login to your account</p>
+                      <p className="mb-4 font-medium text-2xl text-center">Login</p>
                       <div className="mb-4">
                         <input
-                          type="text"
+                          type="email"
                           className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                           id="exampleFormControlInput1"
-                          placeholder="Username"
+                          placeholder="Email"
                         />
                       </div>
                       <div className="mb-4">
